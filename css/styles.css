@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100%;
+  margin: 3.35rem 4.3rem;
+  background: url(../images/bg-desktop.svg) no-repeat center fixed, hsl(257, 40%, 49%);
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  width: 216px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+main {
+  margin: 5rem 0.3rem 0;
+  display: flex;
+  flex-flow: row;
+  gap: 3.3rem;
+}
+main .illustration {
+  display: flex;
+  flex: 1 0 54.8%;
+  align-items: center;
+  position: relative;
+  animation: displayIllustration 1.2s ease;
+}
+@keyframes displayIllustration {
+  from {
+    opacity: 0;
+    right: 4rem;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+main .illustration img {
+  width: 100%;
+}
+main .intro {
+  margin-top: 2.65rem;
+  position: relative;
+  animation: displayName 1s ease;
+}
+@keyframes displayName {
+  from {
+    opacity: 0;
+    left: 2rem;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+main .intro .intro__heading {
+  margin-bottom: 1.325rem;
+  font-size: clamp(1.475rem, 4vw, 2.475rem);
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+}
+main .intro .intro__para {
+  padding-right: 1rem;
+  font-size: clamp(1rem, 4vw, 1.125rem);
+  color: hsl(0, 0%, 100%);
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+main .intro .btn--register {
+  margin-top: 1.5rem;
+  padding: 0.9rem 3.975rem;
+  border-radius: 2rem;
+  background: hsl(0, 0%, 100%);
+  font-size: 1.125rem;
+  color: hsl(257, 40%, 49%);
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.1s ease;
+}
+main .intro .btn--register:hover {
+  background: hsl(300, 69%, 71%);
+  color: hsl(0, 0%, 100%);
+}
+
+footer {
+  margin: 0 0.7rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+footer .social-link {
+  width: 40px;
+  height: 40px;
+  margin-top: 1.3rem;
+  border-radius: 50%;
+  border: 1.5px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.15rem;
+  color: hsl(0, 0%, 100%);
+  transition: 0.1s ease;
+}
+footer .social-link:hover {
+  color: hsl(300, 69%, 71%);
+}
+
+@media (max-width: 1000px) {
+  body {
+    margin: 1.975rem 2rem;
+    background: url(../images/bg-mobile.svg) no-repeat fixed, hsl(257, 40%, 49%);
+    background-size: 100%;
+  }
+  .logo {
+    width: 130px;
+  }
+  main {
+    margin-top: 3.45rem;
+    flex-flow: column;
+    gap: 3.75rem;
+  }
+  main .illustration {
+    max-width: 712px;
+    margin: auto;
+  }
+  main .intro {
+    margin-top: 0rem;
+    text-align: center;
+  }
+  main .intro .intro__heading {
+    margin-bottom: 0.75rem;
+  }
+  main .intro .intro__para {
+    padding-right: 0;
+  }
+  main .intro .btn--register {
+    font-size: 0.74rem;
+    padding: 0.7rem 4.8rem;
+  }
+  footer {
+    margin-top: 2.65rem;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  footer .social-link {
+    width: 28px;
+    height: 28px;
+    font-size: 0.95rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
